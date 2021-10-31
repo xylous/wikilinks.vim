@@ -14,7 +14,7 @@ function! FollowWikiStyleLink()
     " User may have called outside of square brackets
     if len(l:link) != 0
         let l:file= substitute(execute('echo l:link'), '[\n\t]', ' ', 'ge') . '.md'
-        execute 'edit ' . l:file
+        execute 'edit %:h/' . l:file
     else
         echo 'Sorry, not a wiki-style link.'
     endif

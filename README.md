@@ -1,4 +1,4 @@
-# wikilinks.vim 0.1.0
+# wikilinks.vim 0.1.1
 
 Have you ever wanted a Vim plugin to follow Vimwiki-style links (e.g.
 `[[Programming Ideas]]`) without Vimwiki? Well then, this is the perfect plugin
