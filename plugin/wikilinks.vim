@@ -22,6 +22,5 @@ function! FollowWikiStyleLink()
 endfunction
 
 if exists('g:wikilinks_map_key')
-    filetype plugin on
     execute 'autocmd FileType markdown nnoremap <buffer>' g:wikilinks_map_key ':call FollowWikiStyleLink()<CR>'
 endif
