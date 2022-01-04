@@ -1,15 +1,16 @@
 *wikilinks.vim.txt* follow wiki-style links easily
 
 ================================================================================
-CONTENTS                                                    *WikilinksContents*
+CONTENTS                                                       *WikilinksContents*
 
     1. Usage .................................. |WikilinksUsage|
     2. License ................................ |WikilinksLicense|
-    3. Contributing ........................... |WikilinksContributing|
-    4. Credits ................................ |WikilinksCredits|
+    3. Bugs ................................... |WikilinksBugs|
+    4. Contributing ........................... |WikilinksContributing|
+    5. Credits ................................ |WikilinksCredits|
 
 ================================================================================
-Section 1: Usage                                                *WikilinksUsage*
+Section 1: Usage                                                  *WikilinksUsage*
 
 This plugin will let you follow wiki-style links inside Markdown files (such
 as `[[Biology]]` - sends you to a filename called `Biology.md`).
@@ -38,11 +39,24 @@ Or (raw text):
 https://raw.githubusercontent.com/xylous/wikilinks.vim/master/LICENSE
 
 ================================================================================
-Section 3: Contributing                                     *WikilinksContributing*
+Section 3: Bugs                                                    *WikilinksBugs*
+
+You can report bugs by opening an Issue on this project's GitHub page.
+
+Known bugs:
+
+- Any number of square bracket pairs is accepted, e.g. `[`, `[[`, `[[[` etc,
+  although wiki-style links are strictly delimited by `[[` and `]]`
+  Personally, I'd say it's a feature, not a bug
+- It matches text even when outside square brackets. Why? I've no idea. And I
+  don't feel like it's worth fixing either.
+
+================================================================================
+Section 4: Contributing                                    *WikilinksContributing*
 
 If you want to contribute, open an Issue or a Pull Request on GitHub.
 
 ================================================================================
-Section 4: Credits                                              *WikilinksCredits*
+Section 5: Credits                                              *WikilinksCredits*
 
 This plugin was written by xylous <xylous.e@gmail.com>.
