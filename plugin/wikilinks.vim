@@ -14,7 +14,8 @@ function! FollowWikiStyleLink()
     " User may have called outside of square brackets
     if len(l:link) != 0
         let l:no_trailing_whitespace= substitute(l:link, '^\s\+', '', 'e')
-        let l:file= substitute(l:no_trailing_whitespace, '[\n\t]', ' ', 'ge') . '.md'
+        let l:escaped_double_quotes = substitute(l:no_trailing_whitespace, '\"', '\\\"', "ge" )
+        let l:file= substitute(l:escaped_double_quotes, '[\n\t]', ' ', 'ge') . '.md'
         execute 'edit %:h/' . l:file
     else
         echo 'Sorry, not a wiki-style link.'
